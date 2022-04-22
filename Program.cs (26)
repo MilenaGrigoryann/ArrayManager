@@ -11,8 +11,8 @@ namespace ConsoleApp6
         static void Main(string[] args)
         {
             ArrayManager arrayManager = new ArrayManager();
-            int[,] arr2D = arrayManager.CreateArr(4, 5, 10, 80);
-            arrayManager.PrintArr(arr2D);
+            int[,] arr2D = arrayManager.Create(4, 5, 10, 80);
+            arrayManager.Print(arr2D);
 
             Console.WriteLine();
 
@@ -28,8 +28,8 @@ namespace ConsoleApp6
             Console.WriteLine();
 
             ArrayManager arrayManager1 = new ArrayManager();
-            int[] arr1D = arrayManager1.CreateArr(4, 5, 50);
-            arrayManager1.PrintArr(arr1D);
+            int[] arr1D = arrayManager1.Create(4, 5, 50);
+            arrayManager1.Print(arr1D);
 
             Console.WriteLine();
 
@@ -49,7 +49,7 @@ namespace ConsoleApp6
     public class ArrayManager
     {
         #region 2DArray
-        public int[,] CreateArr(int height, int width, int minGenerated, int maxGenerated)
+        public int[,] Create(int height, int width, int minGenerated, int maxGenerated)
         {
             int[,] arr = new int[height, width];
             Random rnd = new Random();
@@ -65,7 +65,7 @@ namespace ConsoleApp6
             }
             return arr;
         }
-        public void PrintArr(int[,] arr)
+        public void Print(int[,] arr)
         {
 
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -205,7 +205,7 @@ namespace ConsoleApp6
         #endregion
 
         #region 1DArray
-        public int[] CreateArr(int height, int minGenerated, int maxGenerated)
+        public int[] Create(int height, int minGenerated, int maxGenerated)
         {
             int[] arr = new int[height];
             Random rnd = new Random();
@@ -220,7 +220,7 @@ namespace ConsoleApp6
             }
             return arr;
         }
-        public void PrintArr(int[] arr)
+        public void Print(int[] arr)
         {
 
             for (int i = 0; i < arr.GetLength(0); i++)
