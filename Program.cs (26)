@@ -23,7 +23,7 @@ namespace ConsoleApp6
             int maxIndex1 = arrayManager.GetMaxIndex1(arr2D);
             int maxIndex2 = arrayManager.GetMaxIndex2(arr2D);
             int[,] swapArr = arrayManager.Swap(arr2D, min, max, minIndex1, minIndex2, maxIndex1, maxIndex2);
-            arrayManager.PrintArr(swapArr);
+            arrayManager.Print(swapArr);
 
             Console.WriteLine();
 
@@ -38,7 +38,7 @@ namespace ConsoleApp6
             int minIndex = arrayManager1.GetMinIndex(arr1D);
             int maxIndex = arrayManager1.GetMaxIndex(arr1D);
             int[] swapArr1D = arrayManager1.Swap(arr1D, min1, max1, minIndex, maxIndex);
-            arrayManager.PrintArr(swapArr1D);
+            arrayManager.Print(swapArr1D);
 
             Console.ReadKey();
 
